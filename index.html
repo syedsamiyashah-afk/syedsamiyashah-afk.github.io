@@ -1,51 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your GIS Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syed Sami Shah | GIS Portfolio</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-    h1 { color: #0066cc; }
-    section { margin: 40px 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+      line-height: 1.6; 
+      color: #333; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px;
+    }
+    header { 
+      text-align: center; 
+      padding: 60px 0; 
+      background: linear-gradient(135deg, #0066cc 0%, #004499 100%); 
+      color: white; 
+      margin-bottom: 60px;
+    }
+    h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
+    h2 { font-size: 1.5rem; margin-bottom: 20px; }
+    nav { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      background: white; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      padding: 15px 0; 
+      z-index: 1000;
+    }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 30px; }
+    nav a { color: #333; text-decoration: none; font-weight: 500; }
+    section { padding: 60px 0; }
+    .projects-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+      gap: 30px; 
+    }
+    .project-card { 
+      border: 1px solid #eee; 
+      border-radius: 12px; 
+      padding: 30px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+      transition: transform 0.3s;
+    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-image { 
+      width: 100%; 
+      height: 200px; 
+      background: #f5f5f5; 
+      border-radius: 8px; 
+      margin-bottom: 20px; 
+    }
+    .btn { 
+      background: #0066cc; 
+      color: white; 
+      padding: 12px 24px; 
+      text-decoration: none; 
+      border-radius: 6px; 
+      display: inline-block; 
+      font-weight: 500;
+    }
+    footer { text-align: center; padding: 40px 0; border-top: 1px solid #eee; color: #666; }
+    @media (max-width: 768px) { h1 { font-size: 2rem; } }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Syed Sami Shah</h1>
     <h2>GIS Student & Spatial Analyst</h2>
     <p>ArcGIS Desktop | QGIS | Spatial Analysis | Cartography</p>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>I create maps and spatial analysis from my ArcGIS Desktop projects and independent work.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a GIS student building skills in spatial analysis, cartography, and web mapping. This portfolio showcases my academic projects from ArcGIS Desktop and independent geospatial work.</p>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
-    <ul>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; list-style: none;">
       <li>ArcGIS Desktop & ArcGIS Online</li>
       <li>QGIS</li>
       <li>Spatial analysis & geoprocessing</li>
       <li>Cartography & map design</li>
+      <li>Python for GIS</li>
+      <li>Remote sensing</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-      <div style="border: 1px solid #ccc; padding: 20px; width: 300px;">
-        <h3>Project 1</h3>
-        <p>Your semester project summary</p>
-        <p><strong>View project →</strong></p>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Land Use Classification</h3>
+        <p>Analyzed urban land use patterns using satellite imagery and field data.</p>
+        <p><strong>Tools:</strong> ArcGIS Pro, QGIS, Sentinel-2</p>
+        <a href="#" class="btn">View StoryMap</a>
       </div>
-      <!-- Add 2 more similar cards -->
+      
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Flood Risk Assessment</h3>
+        <p>Created flood risk map for Hyderabad using DEM and rainfall data.</p>
+        <p><strong>Tools:</strong> ArcGIS Online, Spatial Analyst</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Campus Accessibility</h3>
+        <p>Mapped campus accessibility and path optimization analysis.</p>
+        <p><strong>Tools:</strong> QGIS, Network Analyst</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: /in/yourprofile</p>
+    <p><strong>Email:</strong> your.email@example.com</p>
+    <p><strong>LinkedIn:</strong> /in/syedsamishah</p>
+    <p><strong>GitHub:</strong> syedsamiyashah-afk</p>
   </section>
+
+  <footer>
+    <p>&copy; 2026 Syed Sami Shah. GIS Portfolio.</p>
+  </footer>
 </body>
 </html>
